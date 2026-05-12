@@ -71,4 +71,50 @@ rad.Area(5) # Will Calculate the Area of the Circle with radius 5cm
 rad.Perimeter(5) # Will Calculate the Perimeter of the Circle with radius 5cm
 '''
 
-#Q4: 
+#Q4: Difine an Employee class with attributes role, department & salary. This class also has a showDetails() method.
+# Create an Engineer class that inherits properties from Employee & has additional attributes such as name & age.
+'''
+class Employee:
+    def __init__(self, role, dept, salary):
+        self.role = role
+        self.dept = dept
+        self.salary = salary
+
+    def showDetails(self):
+        print("Role: ", self.role)
+        print("Department: ", self.dept)
+        print("Salary: ", self.salary)
+
+class Engineer(Employee):
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        super().__init__("Engineer", "IT", "90,000")
+
+    def showDetails(self):
+        Employee.showDetails(self)
+        print("Name: ", self.name)
+        print("Age: ", self.age)
+
+eng1 = Engineer("Elon Musk", 50)
+eng1.showDetails()
+'''
+
+#Q5: Create a class called Order which stores item & its price.
+#    Use Dunder function __gt__() to convey that:
+#         order1 > order2 if price of order1 > price of order2
+
+'''
+class Order:
+    def __init__(self, item, price):
+        self.item = item
+        self.price = price
+
+    def __gt__(self, order2):
+        return self.price > order2.price
+
+order1 = Order("Chips", 20)
+order2 = Order("Tea", 15)
+
+print(order1 > order2)
+'''
