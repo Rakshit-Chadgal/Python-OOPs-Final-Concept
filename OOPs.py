@@ -17,8 +17,8 @@ s1.name = "ironman"
 s1.get_avg()
 '''
 
-#Q2: Create Account class with 2 attributes - balance & account no.
-class Account:
+#Q2: Create Account class with 2 attributes - balance & account no. also create methods for debit, credit & printing the balance.
+'''class Account:
     def __init__(self, bal, acc):
         self.balance = bal
         self.account_no = acc
@@ -42,6 +42,6 @@ acc1 = Account(10000, 12345)
 acc1.credit(40000) #salary
 acc1.debit(1000) #shopping
 acc1.credit(500) #increment
-acc1.debit(10000) #rent
+acc1.debit(10000) #rent'''
 
-#Q3: Create methods for debit, credit & printing the balance.
+#Q3: 
